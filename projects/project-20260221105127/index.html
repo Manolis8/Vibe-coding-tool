@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchids of Greece</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #8A2BE2;
+            --secondary-color: #FFFFFF;
+            --background-color: #F5F5F5;
+            --text-color: #333333;
+            --card-background: #FFFFFF;
+            --accent-color: #FF6F61;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background-color: var(--accent-color);
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .orchid-card {
+            background: var(--card-background);
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .orchid-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .orchid-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .orchid-card h2 {
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: calc(100% - 2rem);
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff5a4d;
+        }
+
+        @media (min-width: 600px) {
+            .orchid-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .orchid-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Orchids of Greece</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#species">Species</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>About Greek Orchids</h2>
+            <p>Greece is home to a diverse range of beautiful orchid species, cherished for their unique forms and breathtaking colors. These remarkable plants thrive in the varied habitats found across Greek landscapes.</p>
+        </section>
+        <section id="species">
+            <h2>Explore the Species</h2>
+            <div class="orchid-grid">
+                <div class="orchid-card">
+                    <img src="https://picsum.photos/800/400?random=1" alt="Orchid Sample">
+                    <h2>Orchid Species 1</h2>
+                    <p>Discover the incredible beauty of this species, featuring distinctive patterns and vivid coloration.</p>
+                </div>
+                <div class="orchid-card">
+                    <img src="https://picsum.photos/800/400?random=2" alt="Orchid Sample">
+                    <h2>Orchid Species 2</h2>
+                    <p>Known for their elegant structure, these orchids exhibit a delicate balance of form and color.</p>
+                </div>
+                <div class="orchid-card">
+                    <img src="https://picsum.photos/800/400?random=3" alt="Orchid Sample">
+                    <h2>Orchid Species 3</h2>
+                    <p>This species captivates with its dramatic appearance and vibrant hues.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Orchids of Greece. All rights reserved.</p>
+    </footer>
+</body>
+</html>
